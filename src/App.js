@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import AppHeader from "./components/app/AppHeader";
 import Card from "./components/card/Card";
 import background from "./assets/images/background.jpg";
 
@@ -16,6 +17,7 @@ class App extends Component {
     return (
       <>
         <GlobalStyle />
+        <AppHeader/>
         <Main id="AppContent">
           <Card />
         </Main>
@@ -25,10 +27,14 @@ class App extends Component {
 }
 
 const GlobalStyle = createGlobalStyle`
+  * {
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
   html, body, #app{
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     min-height:100%;
     height:100%;
   }
@@ -37,23 +43,22 @@ const GlobalStyle = createGlobalStyle`
     background-image: url(${background});
     background-position: center;
     background-size:contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   #app{
-    
+    width:100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `;
 
 const Main = styled.main`
-  height: 100%;
-  width: 100%;
-  min-height: 100%;
-`;
 
-const LayoutApp = styled.div`
-  background:black;
-  height:100%;
-  width:100%;
-  min-height:100%;
 `;
 
 

@@ -4,7 +4,7 @@ import Api from "../../service/SwapiApiService";
 import CardButton from "./CardButton";
 import Loader from "./CardLoader";
 
-class Card extends React.Component {
+class Card extends Component {
   state = {
     planetId: null,
     cardData: null
@@ -15,7 +15,6 @@ class Card extends React.Component {
   }
 
   render() {
-    
     if (this.state.cardData === null) {
       return (
         <CardLayout id="Card">
@@ -34,10 +33,10 @@ class Card extends React.Component {
           <CardData>
             <CardName>
               <h2>{name.toUpperCase()}</h2>
-            </CardName>            
+            </CardName>
               <ListData>
                 {this.printCardData(cardData)}
-              </ListData>            
+              </ListData>
           </CardData>
           <CardButton getRandomPlanet={this.getRandomPlanet} />
         </CardBox>
@@ -62,39 +61,36 @@ class Card extends React.Component {
   };
 
   printCardData = (data) =>{
-    const arrayData = Object.entries(data);
 
-    const list = arrayData.map((el,i) => {
+    const arrEntries = Object.entries(data);
 
+    const list = arrEntries.map((el,i) => {
+      const key = arrEntries[i][0].toString().toUpperCase();
+      const listItemValue = arrEntries[i][1].toString().toUpperCase();
 
-      const key = arrayData[i][0].toString().toUpperCase();
 
       if('NAME' === key){
-        return;
+        return false;
       }
 
       if('FILMS' === key){
-      const value = arrayData[i][1].length;
-      const modifiedKey = `Featured In: `.toUpperCase();
-      let modifiedValue = `${value} Films`.toUpperCase();
+        const filmsCount = arrEntries[i][1].length;
 
-      if(0 === value){
-        modifiedValue = `${value} Film`.toUpperCase();
-      }
-
-      
+        const listFilmValue =
+        (filmsCount > 1) ? `Featured In: ${filmsCount} Films` :
+        (filmsCount === 0 ) ? 'Not Featured in Films':
+        (filmsCount === 1) ? `Featured In: ${filmsCount} Film`:
+        '';
         return (
           <li className="list-item film-item" key={i}>
-            <span>{modifiedKey}:</span> {modifiedValue}
+            <span>{listFilmValue.toUpperCase()}</span>
           </li>
         );
       }
 
-      const normalValue = arrayData[i][1].toString().toUpperCase();
-
       return (
         <li className="list-item" key={i}>
-          <span>{key}:</span> {normalValue}
+          <span>{key}:</span> {listItemValue}
         </li>
       );
     });
@@ -109,8 +105,6 @@ const CardLayout = styled.section`
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  height:100%;
-  min-height:100%;
   `;
 
   const CardBox = styled.div`
@@ -123,9 +117,8 @@ const CardName = styled.div`
 `;
 const CardData = styled.div`
   background: #fff;
-  border: 10px solid yellow;
+  border: 10px solid #FFE919;
   width:100%;
-  box-shadow: 0px 50px 111px 68px #000;
 `;
 
 const ListData = styled.ul`

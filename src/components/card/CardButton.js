@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import styled from "styled-components";
-import { HelperGetRandomInt } from "../../helper/RandomNumber";
 
 const CardButton = (props) => {
 
@@ -14,8 +13,8 @@ const CardButton = (props) => {
 const Button = styled.button`
   background: transparent;
   border-radius: 3px;
-  border: 2px solid yellow;
-  color: yellow;
+  border: 2px solid #FFE919;
+  color: #FFE919;
   margin-top: 20px;
   padding: 20px;
   cursor: pointer;
