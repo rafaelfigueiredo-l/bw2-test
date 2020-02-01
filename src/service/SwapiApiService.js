@@ -51,7 +51,7 @@ function Api() {
     
     const getRandomPlanet = async () => {
       const countPlanets = await getCountPlanets();
-      const randomInt = HelperGetRandomInt(0, await countPlanets);
+      const randomInt = HelperGetRandomInt(1, await countPlanets);
       const planetData = await getPlanetData(randomInt);
       if(null === planetData){
         return null;
