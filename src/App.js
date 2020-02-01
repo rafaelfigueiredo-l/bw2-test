@@ -12,8 +12,6 @@ class App extends Component {
   };
 
   render() {
-    const { planetData, loading, countPlanets } = this.state;
-
     return (
       <>
         <GlobalStyle />
