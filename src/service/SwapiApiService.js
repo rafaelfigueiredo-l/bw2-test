@@ -2,7 +2,7 @@ import { SWAPI_API_BASE_URL_PLANETS } from "../config/Constants";
 import { HelperGetRandomInt } from "../helper/RandomNumber";
 
 function Api() {
-  const planets = SWAPI_API_BASE_URL_PLANETS;  
+  const planets = SWAPI_API_BASE_URL_PLANETS + 'aisuhuisahasui';  
   let countPlanets = null;  
 
   
@@ -11,6 +11,7 @@ function Api() {
   const getPlanetsData = async () => {
     try {
       const response = await fetch(planets);
+      if (response.status !== 200) return false;
       const data = await response.json();
       return data;
       } catch (error) {
@@ -22,6 +23,7 @@ function Api() {
   const getPlanetById = async (id) => {
       try {
         const response = await fetch(planets + id);
+        if (response.status !== 200) return false;
         const data = await response.json();
         return data;
       } catch (error) {
@@ -33,6 +35,8 @@ function Api() {
     const getPlanetData = async (id) => {
       try {
         const response = await getPlanetById(id);
+        if(false === response) return false;
+        console.log(response);
         const { name, population, climate, terrain, films } = response;
         return {name, population, climate, terrain, films};
       } catch (error) {

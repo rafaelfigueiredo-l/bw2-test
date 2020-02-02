@@ -6,16 +6,22 @@ import Loader from "./CardLoader";
 
 class Card extends Component {
   state = {
+    error: null,
     planetId: null,
-    cardData: null
+    cardData: null,
   };
 
   componentDidMount() {
     this.getRandomPlanet();
   }
-
+  
   render() {
-    if (this.state.cardData === null) {
+
+    if (true === this.state.error) {
+      return null; 
+    }
+
+    if (null === this.state.cardData) {
       return (
         <CardLayout id="Card">
           <CardBox>
@@ -24,6 +30,8 @@ class Card extends Component {
         </CardLayout>
       );
     }
+
+
 
     const {cardData} = this.state;
     const { name } = cardData;
@@ -47,6 +55,12 @@ class Card extends Component {
   getRandomPlanet = async id => {
     this.setState({ planetId: null, cardData: null });
     const data = await Api.getRandomPlanet();
+    if(false === data ){
+      console.log(this.props);
+      this.props.setAlert('error', 'Api Response Not Found. Try Again Later.', 'Card');
+      this.setState({error: true});
+      return false;
+    }
     const { name, population, climate, terrain, films } = data;
     this.setState({
       planetId: id,

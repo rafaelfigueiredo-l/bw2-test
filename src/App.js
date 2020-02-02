@@ -1,26 +1,43 @@
 import React, { Component } from "react";
 import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
+import AppAlert from "./components/app/AppAlert";
 import AppHeader from "./components/app/AppHeader";
 import Card from "./components/card/Card";
 import background from "./assets/images/background.jpg";
 
 class App extends Component {
   state = {
-    planetId: null,
-    planetData: null,
+    alertError: {
+      status: null,
+      type: null,
+      message: null,
+      component: null,
+    },
   };
+  
 
   render() {
     return (
       <>
         <GlobalStyle />
         <AppHeader/>
+        <AppAlert alertError={this.state.alertError}/>
         <main id="AppContent">
-          <Card />
+          <Card setAlert={this.setAlert} />
         </main>
       </>
     );
+  }
+
+  setAlert = (type, message, component) => {
+    this.setState({alertError: {
+      status: true,
+      type: type,
+      message: message,
+      component: component,
+    }});
+    console.log(this.state);
   }
 }
 
