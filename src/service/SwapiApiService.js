@@ -2,7 +2,7 @@ import { SWAPI_API_BASE_URL_PLANETS } from "../config/Constants";
 import { HelperGetRandomInt } from "../helper/RandomNumber";
 
 function Api() {
-  const planets = SWAPI_API_BASE_URL_PLANETS + 'aisuhuisahasui';  
+  const planets = SWAPI_API_BASE_URL_PLANETS;  
   let countPlanets = null;  
 
   
