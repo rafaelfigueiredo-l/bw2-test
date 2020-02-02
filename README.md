@@ -1,11 +1,12 @@
-#B2W APP TEST
+# B2W APP TEST
 
 ![](app.gif)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app) (JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT) + COFFEE = ❤️
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
+JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT + COFFEE = ❤️
 
 
-Getting Started
+### Getting Started
 _______________________
 
 ```
@@ -37,7 +38,7 @@ $ npm run build
 $npm test
 ```
 
-###Built With
+### Built With
 
 * [API SWAPI](https://swapi.co/)
 * [React](https://reactjs.org/)
