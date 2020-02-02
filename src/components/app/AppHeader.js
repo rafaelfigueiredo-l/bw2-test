@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Logo from "../../assets/images/logo.png";
 
 
-const CardButton = (props) => {
+const AppHeader = (props) => {
 
   return (
     <>
@@ -27,4 +27,4 @@ const Header = styled.header`
     }
 `;
 
-export default CardButton;
+export default AppHeader;
