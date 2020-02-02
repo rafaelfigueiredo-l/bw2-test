@@ -4,15 +4,14 @@ import styled from "styled-components";
 
 const AppAlert = (props) => {
 
-    console.log(props);
-
-    if(false === props.alertError.status || null === props.alertError.status){
+    const {status, type, message } = props.alertError;
+    if(false === status || null === status){
         return null;
     }
 
     return (
         <>
-        <Alert className={`alert alert-${props.alertError.type}`}><span>{props.alertError.message}</span></Alert>
+        <Alert className={`alert alert-${type}`}><span>{message}</span></Alert>
         </>
     );
 };

@@ -36,7 +36,6 @@ function Api() {
       try {
         const response = await getPlanetById(id);
         if(false === response) return false;
-        console.log(response);
         const { name, population, climate, terrain, films } = response;
         return {name, population, climate, terrain, films};
       } catch (error) {
