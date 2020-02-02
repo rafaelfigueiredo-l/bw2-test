@@ -16,9 +16,9 @@ class App extends Component {
       <>
         <GlobalStyle />
         <AppHeader/>
-        <Main id="AppContent">
+        <main id="AppContent">
           <Card />
-        </Main>
+        </main>
       </>
     );
   }
@@ -53,10 +53,6 @@ const GlobalStyle = createGlobalStyle`
     justify-content: center;
     align-items: center;
   }
-`;
-
-const Main = styled.main`
-
 `;
 
 
