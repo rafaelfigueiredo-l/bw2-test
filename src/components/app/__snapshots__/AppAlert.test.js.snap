@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<AppAlert /> Snapshot false || null ? should return null 1`] = `""`;
+
+exports[`<AppAlert /> Snapshot testing 1`] = `
+<styled.div
+  className="alert alert-Some Type"
+>
+  <span>
+    Some Message
+  </span>
+</styled.div>
+`;

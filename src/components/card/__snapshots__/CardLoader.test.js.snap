@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CardLoader /> Snapshot testing 1`] = `
+<styled.div>
+  Loading...
+</styled.div>
+`;

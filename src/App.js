@@ -14,12 +14,12 @@ class App extends Component {
       component: null,
     },
   };
-  
+
 
   render() {
     const {alertError} = this.state;
     const {setAlert} = this;
-    
+
     return (
       <>
         <GlobalStyle />

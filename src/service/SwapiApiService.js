@@ -2,11 +2,9 @@ import { SWAPI_API_BASE_URL_PLANETS } from "../config/Constants";
 import { HelperGetRandomInt } from "../helper/RandomNumber";
 
 function Api() {
-  const planets = SWAPI_API_BASE_URL_PLANETS;  
-  let countPlanets = null;  
+  const planets = SWAPI_API_BASE_URL_PLANETS;
+  let countPlanets = null;
 
-  
-  
 
   const getPlanetsData = async () => {
     try {
@@ -48,10 +46,10 @@ function Api() {
       if(null === countPlanets){
         const { count } = await getPlanetsData();
         countPlanets = count;
-      }      
+      }
       return countPlanets;
     };
-    
+
     const getRandomPlanet = async () => {
       const countPlanets = await getCountPlanets();
       const randomInt = HelperGetRandomInt(1, await countPlanets);

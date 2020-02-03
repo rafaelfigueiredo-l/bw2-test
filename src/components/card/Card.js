@@ -15,13 +15,13 @@ class Card extends Component {
   componentDidMount() {
     this.getRandomPlanet();
   }
-  
+
   render() {
     const {cardData, error} = this.state;
     const {printCardData} = this;
 
     if (true === error) {
-      return null; 
+      return null;
     }
 
     if (null === cardData) {
@@ -33,7 +33,7 @@ class Card extends Component {
         </CardLayout>
       );
     }
-    
+
     return (
       <CardLayout id="Card">
         <CardBox>

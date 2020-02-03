@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> Snapshot testing 1`] = `
+<styled.section
+  id="Card"
+>
+  <styled.div>
+    <Loader />
+  </styled.div>
+</styled.section>
+`;
