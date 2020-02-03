@@ -3,7 +3,7 @@
 ![](app.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br/>
-JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT + COFFEE = ❤️
+JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT + JEST + ENZYME + PROP TYPES + COFFEE = ❤️
 
 
 ### Getting Started
@@ -49,6 +49,9 @@ $npm test
 * [Webpack](https://webpack.js.org/)
 * [Node](https://nodejs.org/)
 * [NPM](https://www.npmjs.com/)
+* [JEST](https://jestjs.io/en/)
+* [ENZYME](https://airbnb.io/enzyme/)
+* [PROP TYPES](https://www.npmjs.com/package/prop-types)
 
 
 
