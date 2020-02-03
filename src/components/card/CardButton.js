@@ -1,11 +1,14 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const CardButton = (props) => {
 
+  const {getRandomPlanet} = props;
+
   return (
     <>
-      <Wrapper><Button onClick={() => props.getRandomPlanet()}>NEXT</Button></Wrapper>
+      <Wrapper><Button onClick={() => getRandomPlanet()}>NEXT</Button></Wrapper>
     </>
   );
 };
@@ -26,5 +29,9 @@ const Wrapper = styled.div`
   align-items: center;
   justify-content: center;
 `;
+
+CardButton.propTypes = {
+  getRandomPlanet: PropTypes.func.isRequired,
+};
 
 export default CardButton;

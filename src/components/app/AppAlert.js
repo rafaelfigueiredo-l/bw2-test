@@ -1,18 +1,19 @@
 import React from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 
 
-const AppAlert = (props) => {
 
-    const {status, type, message } = props.alertError;
+const AppAlert = (props) => {
+  const {status, type, message } = props.alertError;
+
+
     if(false === status || null === status){
         return null;
     }
 
     return (
-        <>
         <Alert className={`alert alert-${type}`}><span>{message}</span></Alert>
-        </>
     );
 };
 
@@ -32,5 +33,9 @@ const Alert = styled.div`
   }
 
 `;
+
+AppAlert.propTypes = {
+  alertError: PropTypes.object.isRequired,
+};
 
 export default AppAlert;

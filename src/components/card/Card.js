@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 import styled from "styled-components";
 import Api from "../../service/SwapiApiService";
 import CardButton from "./CardButton";
@@ -16,12 +17,14 @@ class Card extends Component {
   }
   
   render() {
+    const {cardData, error} = this.state;
+    const {printCardData} = this;
 
-    if (true === this.state.error) {
+    if (true === error) {
       return null; 
     }
 
-    if (null === this.state.cardData) {
+    if (null === cardData) {
       return (
         <CardLayout id="Card">
           <CardBox>
@@ -30,20 +33,16 @@ class Card extends Component {
         </CardLayout>
       );
     }
-
-
-
-    const {cardData} = this.state;
-    const { name } = cardData;
+    
     return (
       <CardLayout id="Card">
         <CardBox>
           <CardData>
             <CardName>
-              <h2>{name.toUpperCase()}</h2>
+              <h2>{cardData.name.toUpperCase()}</h2>
             </CardName>
               <ListData>
-                {this.printCardData(cardData)}
+                {printCardData(cardData)}
               </ListData>
           </CardData>
           <CardButton getRandomPlanet={this.getRandomPlanet} />
@@ -56,7 +55,6 @@ class Card extends Component {
     this.setState({ planetId: null, cardData: null });
     const data = await Api.getRandomPlanet();
     if(false === data ){
-      console.log(this.props);
       this.props.setAlert('error', 'Api Response Not Found. Try Again Later.', 'Card');
       this.setState({error: true});
       return false;
@@ -148,5 +146,10 @@ const ListData = styled.ul`
     padding-top: 30px;
   }
 `;
+
+Card.propTypes = {
+  setAlert: PropTypes.func.isRequired,
+};
+
 export default Card;
 

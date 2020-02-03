@@ -7,7 +7,7 @@ const AppHeader = (props) => {
 
   return (
     <>
-      <Header><a href="#"><img src={Logo}/></a></Header>
+      <Header><a href="/#"><img alt='Star Wars Logo' src={Logo}/></a></Header>
     </>
   );
 };

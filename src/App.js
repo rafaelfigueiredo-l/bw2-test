@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import styled from "styled-components";
 import { createGlobalStyle } from "styled-components";
 import AppAlert from "./components/app/AppAlert";
 import AppHeader from "./components/app/AppHeader";
@@ -18,13 +17,16 @@ class App extends Component {
   
 
   render() {
+    const {alertError} = this.state;
+    const {setAlert} = this;
+    
     return (
       <>
         <GlobalStyle />
         <AppHeader/>
-        <AppAlert alertError={this.state.alertError}/>
+        <AppAlert alertError={alertError}/>
         <main id="AppContent">
-          <Card setAlert={this.setAlert} />
+          <Card setAlert={setAlert} />
         </main>
       </>
     );
@@ -37,7 +39,6 @@ class App extends Component {
       message: message,
       component: component,
     }});
-    console.log(this.state);
   }
 }
 
