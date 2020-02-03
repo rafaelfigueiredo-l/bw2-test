@@ -3,7 +3,7 @@
 ![](app.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br/>
-API SWAPI + JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT + JEST + ENZYME + PROP TYPES + COFFEE = ❤️
+API SWAPI + JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT + JEST + ENZYME + PROP TYPES = ❤️
 
 
 ### Getting Started
