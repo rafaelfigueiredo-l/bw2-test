@@ -3,7 +3,7 @@
 ![](app.gif)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).<br/>
-JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT + JEST + ENZYME + PROP TYPES + COFFEE = ❤️
+API SWAPI + JAVASCRIPT + CSS + SASS + REACT + WEBPACK + BABEL + ESLINT + JEST + ENZYME + PROP TYPES + COFFEE = ❤️
 
 
 ### Getting Started
@@ -40,18 +40,17 @@ $npm test
 
 ### Built With
 
-* [API SWAPI](https://swapi.co/)
+* [Api Swapi](https://swapi.co/)
 * [React](https://reactjs.org/)
 * [SASS](https://sass-lang.com/)
 * [ESLint](https://eslint.org/)
-* [Jest](https://jestjs.io/)
 * [Babel](https://babeljs.io/)
 * [Webpack](https://webpack.js.org/)
 * [Node](https://nodejs.org/)
 * [NPM](https://www.npmjs.com/)
-* [JEST](https://jestjs.io/en/)
-* [ENZYME](https://airbnb.io/enzyme/)
-* [PROP TYPES](https://www.npmjs.com/package/prop-types)
+* [Jest](https://jestjs.io/)
+* [Enzyme](https://airbnb.io/enzyme/)
+* [PropTypes](https://www.npmjs.com/package/prop-types)
 
 
 
